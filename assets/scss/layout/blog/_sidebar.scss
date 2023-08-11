@@ -1,0 +1,159 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  5.3 Sidebar css
+/*----------------------------------------*/
+
+.#{$theme-prefix}-sidebar{
+    $self : &;
+    &-wrapper{}
+    &-widget{
+        padding: 30px;
+        border-radius: 5px;
+        background: var(--tp-common-white);
+        box-shadow: 0px 4px 13px -2px rgba(19, 16, 34, 0.06), 0px 4.800000190734863px 24.399999618530273px -6px rgba(19, 16, 34, 0.10);
+        &-content{
+            & ul{
+                & li{
+                    list-style: none;
+                    &:not(:last-of-type){
+                        border-bottom: 1px solid #E3E3E3;
+                        margin-bottom: 20px;
+                        padding-bottom: 20px;
+                    }
+                    & a{
+                        font-size: 20px;
+                        font-weight: 500;
+                        letter-spacing: -0.8px;
+                        display: block;
+                        &:hover{
+                            & i{
+                                animation: tfLeftToRight 0.5s forwards;
+                            }
+                        }
+                        & i{
+                            font-size: 14px;
+                            margin-right: 2px;
+                            transform: translateY(0px);
+                            @include textGradient();
+                        }
+                    }
+                }
+            }
+        }
+        &-title{
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            letter-spacing: -0.96px;
+        }
+    }
+    &-search{
+        &-input{
+            position: relative;
+            & input{
+                font-size: 16px;
+                width: 100%;
+                height: 60px;
+                line-height: 60px;
+                border-radius: 10px;
+                background: #F6F6F9;
+                padding: 0 25px;
+                padding-right: 25px;
+                padding-right: 60px;
+                border: 1px solid transparent;
+                &::placeholder{
+                    font-size: 16px;
+                    color: var(--tp-text-1);
+                }
+                &:focus{
+                    font-size: 16px;
+                    color: var(--tp-text-1);
+                    border: 1px solid var(--tp-theme-primary);
+                }
+            }
+            & button{
+                position: absolute;
+                top: 15px;
+                right: 30px;
+                & i{
+                    font-size: 16px;
+                    font-weight: 900;
+                    @include textGradient();
+                }
+            }
+        }
+    }
+
+    &-work{
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5px;
+        &::after{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            opacity: 0.8999999761581421;
+            background: var(--tp-heading-primary);
+            z-index: 0;
+        }
+        &-title{
+            position: relative;
+            font-size: 24px;
+            font-weight: 600;
+            padding: 11px;
+            margin: 0;
+            z-index: 1;
+            letter-spacing: -0.96px;
+            border-radius: 5px 5px 0 0;
+            color: var(--tp-common-white);
+            background: var(--tp-gradient-primary);
+        }
+        &-content{
+            padding: 40px 30px;
+            & p{
+                position: relative;
+                z-index: 1;
+                color: var(--tp-common-white);
+            }
+        }
+        &-icon{
+            & span{
+                display: inline-block;
+                height: 65px;
+                width: 65px;
+                line-height: 65px;
+                border-radius: 5px;
+                background: var(--tp-common-white);
+                margin-bottom: 20px;
+                position: relative;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+
+
+// tag-cloud
+.tagcloud{
+    & a{
+        font-size: 16px;
+        color: var(--tp-text-1);
+        padding: 8px 26px;
+        display: inline-block;
+        background: #F6F6F9;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        @media #{$xl} {
+            margin-right: 7px;
+        }
+        &:hover{
+            color: var(--tp-theme-primary);
+        }
+    }
+}
