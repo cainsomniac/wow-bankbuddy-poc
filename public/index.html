@@ -4,12 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>WoW - Bank Buddy</title>
+  <title>WoW - BankPH</title>
   <meta name="description" content="watson assistant">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self' *.watson.appdomain.cloud fonts.gstatic.com 'unsafe-inline';connect-src *.watson.appdomain.cloud" 
+  /> -->
   <meta
   http-equiv="Content-Security-Policy"
-  content="default-src 'self' *.watson.appdomain.cloud fonts.gstatic.com 'unsafe-inline';connect-src *.watson.appdomain.cloud" />
+  content="default-src 'self' *.watson.appdomain.cloud fonts.gstatic.com 'unsafe-inline';connect-src *.watson.appdomain.cloud; img-src * self;frame-src * self blob: data: gap:;"
+  />
 
   <!-- Place favicon.ico in the root directory -->
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
@@ -99,10 +104,10 @@
   // own assistant if you wish to try this example with your assistant. You can find the documentation for this at
   // https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configurationobject.
   window.watsonAssistantChatOptions = {
-    showRestartButton: true,
-      integrationID: "376ef92e-04cc-450f-a044-15cf5f3de548", // The ID of this integration.
-      region: "au-syd", // The region your integration is hosted in.
-      serviceInstanceID: "72a56e5a-a6d3-4ca5-bddb-7ab1ea1d1183", // The ID of your service instance.
+      showRestartButton: true,
+      integrationID: "376ef92e-04cc-450f-a044-15cf5f3de548", // integrationID
+      region: "au-syd", // region
+      serviceInstanceID: "72a56e5a-a6d3-4ca5-bddb-7ab1ea1d1183", // serviceInstanceId
     onLoad: onLoad,
   };
   setTimeout(function(){const t=document.createElement('script');t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";document.head.appendChild(t);});
@@ -184,6 +189,7 @@
           <div class="offcanvas__logo logo">
             <a href="index.html">
               <!-- <img src="assets/img/logo/logo-black.png" alt="logo"> -->
+              <img src="assets/img/logo/logo-bank.png" alt="logo">
             </a>
           </div>
         </div>
@@ -198,8 +204,7 @@
             </div>
             <div class="offcanvas__contact-content-content">
               <a
-                href="https://www.google.com/maps/search/86+Road+Broklyn+Street,+600+New+York,+USA/@40.6897806,-74.0278086,12z/data=!3m1!4b1">86
-                Road Broklyn Street, 600 </a>
+                href="https://goo.gl/maps/t8rpnE4i9cNtmiLB6">Brgy, Makati Stock Exchange Building, G/F, Ayala Ave, Makati, 1226 Metro Manila</a>
             </div>
           </div>
           <div class="offcanvas__contact-content d-flex">
@@ -207,7 +212,7 @@
               <i class="fa-solid fa-envelope"></i>
             </div>
             <div class="offcanvas__contact-content-content">
-              <a href="mailto:needhelp@company.com"> Needhelp@company.com </a>
+              <a href="mailto:support@bankph.com"> support@bankph.com </a>
             </div>
           </div>
           <div class="offcanvas__contact-content d-flex">
@@ -215,7 +220,7 @@
               <i class="fa-solid fa-phone"></i>
             </div>
             <div class="offcanvas__contact-content-content">
-              <a href="tel:01310-069824"> +92 666 888 0000</a>
+              <span><a href="tel:+63180015500059">(+63) 1800 1550 0059</a></span>
             </div>
           </div>
         </div>
@@ -239,14 +244,14 @@
         <span class="tp-header-logo-bg"></span>
         <a href="index.html">
           <!-- <img src="assets/img/logo/logo.png" alt=""> -->
+          <img src="assets/img/logo/logo2.png" alt="">
         </a>
       </div>
       <div class="tp-header-wrapper-inner header__sticky p-relative">
         <div class="tp-header-top d-none d-xl-flex">
           <div class="tp-header-top-info">
-            <a href="https://www.google.com/maps/search/6391+Elgin+St,+Wilmington,+DE,+USA/@39.7298967,-75.5645038,13z/data=!3m1!4b1"
-              target="_blank"><span><i class="fa-sharp fa-solid fa-location-dot"></i></span>6391 Elgin St. Celina,
-              10299</a>
+            <a href="https://goo.gl/maps/t8rpnE4i9cNtmiLB6"
+              target="_blank"><span><i class="fa-sharp fa-solid fa-location-dot"></i></span>Brgy, Makati Stock Exchange Building, G/F, Ayala Ave, Makati, 1226 Metro Manila</a>
           </div>
           <div class="tp-header-top-right d-flex justify-content-end align-items-center">
             <div class="header-social ">
@@ -261,12 +266,12 @@
           <div class="tp-main-menu d-none d-xl-block">
             <nav class="tp-main-menu-content">
               <ul>
-                <li class="has-dropdown">
-                  <a href="index.html">Home</a>
-                  <div class="tp-submenu submenu has-homemenu">
+                <!-- <li class="has-dropdown"> -->
+                  <li><a href="index.html">Home</a></li>
+                  <!-- <div class="tp-submenu submenu has-homemenu">
                     <div class="row gx-6 row-cols-1 row-cols-md-2 row-cols-xl-3">
-                      <div class="col homemenu">
-                        <div class="homemenu-thumb mb-15">
+                      <div class="col homemenu"> -->
+                        <!-- <div class="homemenu-thumb mb-15">
                           <img src="assets/img/menu/img-1.jpg" alt="">
                           <div class="homemenu-btn">
                             <a class="menu-btn show-1" href="index.html">Multi Page</a> <br>
@@ -278,8 +283,8 @@
                             <a href="index.html">Home 01</a>
                           </h4>
                         </div>
-                      </div>
-                      <div class="col homemenu">
+                      </div> -->
+                      <!-- <div class="col homemenu">
                         <div class="homemenu-thumb mb-15">
                           <img src="assets/img/menu/img-2.jpg" alt="">
                           <div class="homemenu-btn">
@@ -292,8 +297,8 @@
                             <a href="index-2.html">Home 02</a>
                           </h4>
                         </div>
-                      </div>
-                      <div class="col homemenu">
+                      </div> -->
+                      <!-- <div class="col homemenu">
                         <div class="homemenu-thumb mb-15">
                           <img src="assets/img/menu/img-3.jpg" alt="">
                           <div class="homemenu-btn">
@@ -306,34 +311,34 @@
                             <a href="index-3.html">Home 03</a>
                           </h4>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
+                      </div> -->
+                    <!-- </div>
+                  </div> -->
+                <!-- </li> -->
                 <li><a href="about.html">About Us</a></li>
                 <li class="has-dropdown"><a href="service.html">Services</a>
                   <ul class="submenu">
-                    <li><a href="service.html">Service</a></li>
-                    <li><a href="service-details.html">Service Details</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Service Details</a></li>
                   </ul>
                 </li>
                 <li class="has-dropdown">
                   <a href="index.html">Page</a>
                   <ul class="submenu">
-                    <li><a href="project.html">Project</a></li>
-                    <li><a href="project-details.html">Project Details</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="team-details.html">Team Details</a></li>
-                    <li><a href="faq.html">Faq</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Project Details</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Team Details</a></li>
+                    <li><a href="#">Faq</a></li>
                   </ul>
                 </li>
-                <li class="has-dropdown"><a href="blog-classic.html">Blog</a>
+                <!-- <li class="has-dropdown"><a href="blog-classic.html">Blog</a>
                   <ul class="submenu">
                     <li><a href="blog-classic.html">Blog</a></li>
                     <li><a href="blog-details.html">Blog Details</a></li>
                   </ul>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
+                </li> -->
+                <li><a href="#">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -348,7 +353,7 @@
                 </div>
                 <div class="tp-header-contact-content">
                   <p>Requesting A Call:</p>
-                  <span><a href="tel:555-0111">(629) 555-0129</a></span>
+                  <span><a href="tel:+63180015500059">(+63) 1800 1550 0059</a></span>
                 </div>
               </div>
             </div>
@@ -363,7 +368,7 @@
         </div>
       </div>
       <div class="tp-header-btn">
-        <a class="tp-btn d-none d-xl-block" href="contact.html">Get a quote <i
+        <a class="tp-btn d-none d-xl-block" href="#">Contact Us <i
             class="fa-regular fa-arrow-right"></i></a>
         <div class="tp-header-main-right-hamburger-btn d-xl-none offcanvas-open-btn">
           <button class="hamburger-btn">
@@ -386,6 +391,7 @@
             <div class="tp-header-logo-2 p-relative">
               <a href="index.html">
                 <!-- <img src="assets/img/logo/logo-black.png" alt=""> -->
+                <img src="assets/img/logo/logo-bank.png" alt="">
               </a>
             </div>
           </div>
@@ -397,7 +403,7 @@
                     <a href="index.html">Home</a>
                     <div class="tp-submenu submenu has-homemenu">
                       <div class="row gx-6 row-cols-1 row-cols-md-2 row-cols-xl-3">
-                        <div class="col homemenu">
+                        <!-- <div class="col homemenu">
                           <div class="homemenu-thumb mb-15">
                             <img src="assets/img/menu/img-1.jpg" alt="">
                             <div class="homemenu-btn">
@@ -410,8 +416,8 @@
                               <a href="index.html">Home 01</a>
                             </h4>
                           </div>
-                        </div>
-                        <div class="col homemenu">
+                        </div> -->
+                        <!-- <div class="col homemenu">
                           <div class="homemenu-thumb mb-15">
                             <img src="assets/img/menu/img-2.jpg" alt="">
                             <div class="homemenu-btn">
@@ -424,48 +430,48 @@
                               <a href="index-2.html">Home 02</a>
                             </h4>
                           </div>
-                        </div>
-                        <div class="col homemenu">
+                        </div> -->
+                        <!-- <div class="col homemenu">
                           <div class="homemenu-thumb mb-15">
                             <img src="assets/img/menu/img-3.jpg" alt="">
                             <div class="homemenu-btn">
                               <a class="menu-btn show-1" href="index-3.html">Multi Page</a>
                               <a class="menu-btn show-2" href="index3-one-page.html">One Page</a>
                             </div>
-                          </div>
-                          <div class="homemenu-content text-center">
+                          </div> -->
+                          <!-- <div class="homemenu-content text-center">
                             <h4 class="homemenu-title">
                               <a href="index-3.html">Home 03</a>
                             </h4>
                           </div>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                   </li>
                   <li><a href="about.html">About Us</a></li>
-                  <li class="has-dropdown"><a href="service.html">Services</a>
+                  <li class="has-dropdown"><a href="#">Services</a>
                     <ul class="submenu">
-                      <li><a href="service.html">Service</a></li>
-                      <li><a href="service-details.html">Service Details</a></li>
+                      <li><a href="#">Service</a></li>
+                      <li><a href="#">Service Details</a></li>
                     </ul>
                   </li>
                   <li class="has-dropdown">
                     <a href="index.html">Page</a>
                     <ul class="submenu">
-                      <li><a href="project.html">Project</a></li>
-                      <li><a href="project-details.html">Project Details</a></li>
-                      <li><a href="team.html">Team</a></li>
-                      <li><a href="team-details.html">Team Details</a></li>
+                      <li><a href="#">Project</a></li>
+                      <li><a href="#">Project Details</a></li>
+                      <li><a href="#">Team</a></li>
+                      <li><a href="#">Team Details</a></li>
                       <li><a href="faq.html">Faq</a></li>
                     </ul>
                   </li>
-                  <li class="has-dropdown"><a href="blog-classic.html">Blog</a>
+                  <!-- <li class="has-dropdown"><a href="blog-classic.html">Blog</a>
                     <ul class="submenu">
                       <li><a href="blog-classic.html">Blog</a></li>
                       <li><a href="blog-details.html">Blog Details</a></li>
                     </ul>
-                  </li>
-                  <li><a href="contact.html">Contact</a></li>
+                  </li> -->
+                  <li><a href="#">Contact</a></li>
                 </ul>
               </nav>
             </div>
@@ -768,15 +774,13 @@
                 <span class="tp-section-title-pre">ABOUT US</span>
                 <h3 class="tp-section-title">Solutions that make a difference</h3>
               </div>
-              <p>Payment solutions enable businesses to accept payments Payment stions enable businesses to accept
-                payments from ctly customers ctly securely. stions enable businesses to accept payments from ctly
-                customers ctly securely.</p>
+              <p>At BankPH, we are dedicated to reshaping the future of financial services through innovation, integrity, and excellence. With an unwavering commitment to our customers, we strive to deliver personalized solutions that empower individuals and businesses to achieve their financial aspirations. Our foundation is built upon trust, transparency, and a passion for driving positive change in the industry.</p>
+
               <div class="tp-about-wrapper-list">
                 <ul>
-                  <li><span><i class="fa-regular fa-circle"></i></span> Mistakes To Avoid to dum Auam.</li>
-                  <li><span><i class="fa-regular fa-circle"></i></span> Avoid to the dumy mistakes</li>
-                  <li><span><i class="fa-regular fa-circle"></i></span> Your Startup industry stan</li>
-                  <li><span><i class="fa-regular fa-circle"></i></span> Our Startup industry Here</li>
+                  <li><span><i class="fa-regular fa-circle"></i></span> Our Vision and Values</li>
+                  <li><span><i class="fa-regular fa-circle"></i></span> A Legacy of Trust</li>
+                  <li><span><i class="fa-regular fa-circle"></i></span> Unparalleled Expertise</li>
                 </ul>
               </div>
               <div class="tp-about-btn">
@@ -791,7 +795,7 @@
 
 
     <!-- service area start -->
-    <section class="tp-service-area pt-120 pb-90" data-bg-color="#F6F6F9">
+    <!-- <section class="tp-service-area pt-120 pb-90" data-bg-color="#F6F6F9">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-8">
@@ -884,12 +888,12 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- service area end -->
 
 
     <!-- brand area start -->
-    <div class="tp-brand-area tp-brand-background p-relative pb-120">
+    <!-- <div class="tp-brand-area tp-brand-background p-relative pb-120">
       <div class="container">
         <div class="tp-brand-wrapper p-relative wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"
           data-background="assets/img/brand/bg-shape.png">
@@ -917,12 +921,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- brand area end -->
 
 
     <!-- project area start -->
-    <section class="tp-project-area pb-95">
+    <!-- <section class="tp-project-area pb-95">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -1186,12 +1190,12 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- project area end -->
 
 
     <!-- process area start -->
-    <section class="tp-process-arae pt-120 pb-120" data-bg-color="#F6F6F9">
+    <!-- <section class="tp-process-arae pt-120 pb-120" data-bg-color="#F6F6F9">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
@@ -1266,7 +1270,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- process area end -->
 
 
@@ -1280,8 +1284,8 @@
               <div class="tp-faq-title-wrapper">
                 <span class="tp-section-title-pre">ask anything</span>
                 <h3 class="tp-section-title">You can contact <br> us for any question </h3>
-                <p>Fact that a reader will be distrol acted bioiiy desig the.ished fact that a reader will be distrol
-                  acted bioiiy bioiiy desig the.ished fact that a reader ished fact that </p>
+                <!-- <p>Fact that a reader will be distrol acted bioiiy desig the.ished fact that a reader will be distrol
+                  acted bioiiy bioiiy desig the.ished fact that a reader ished fact that </p> -->
               </div>
               <div class="tp-faq-counter-wrapper d-flex">
                 <div class="tp-faq-counter d-flex align-items-center mr-20 mb-30">
@@ -1292,7 +1296,7 @@
                   </div>
                   <div class="tp-faq-counter-content">
                     <h4 class="tp-faq-counter-title"><span class="purecounter" data-purecounter-duration="3"
-                        data-purecounter-end="10"></span>+</h4>
+                        data-purecounter-end="10000"></span> +</h4>
                     <p>Experiences</p>
                   </div>
                 </div>
@@ -1304,8 +1308,8 @@
                   </div>
                   <div class="tp-faq-counter-content">
                     <h4 class="tp-faq-counter-title"><span class="purecounter" data-purecounter-duration="2"
-                        data-purecounter-end="500"></span>+</h4>
-                    <p>Happy Client</p>
+                        data-purecounter-end="1000000"></span> +</h4>
+                    <p>Happy Clients</p>
                   </div>
                 </div>
               </div>
@@ -1318,14 +1322,17 @@
                   <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                       data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      What is business consulting?
+                      What are our banking consulting services? 
                     </button>
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                     data-bs-parent="#general_accordion">
                     <div class="accordion-body">
-                      <p>Business consulting is a service provided by professionals who offer expert advice and guidance
-                        to organizations seeking to improve their business processes, strategies, and operations</p>
+                      <p><b>Strategic Financial Advisory: </b>Our banking consulting experts offer comprehensive strategic financial advisory services to guide banks and financial institutions in making informed decisions. 
+                      Whether it's optimizing capital allocation, assessing risk management frameworks, or designing growth strategies, we provide actionable insights that drive sustainable success in a dynamic market.</p>
+                      <br />
+                      <p><b> Digital Transformation Solutions: </b>On today's digital age, we specialize in helping banks seamlessly transition into the digital realm. Our consulting services encompass everything from implementing advanced online banking platforms and mobile apps to enhancing cybersecurity measures. 
+                      We work to enhance customer experiences, streamline operations, and ensure compliance in an increasingly technology-driven landscape.</p>   
                     </div>
                   </div>
                 </div>
@@ -1333,14 +1340,23 @@
                   <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      What types of businesses typically use consulting services?
+                      What types of businesses typically use banking consulting services?
                     </button>
                   </h2>
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#general_accordion">
                     <div class="accordion-body">
-                      <p>Business consulting is a service provided by professionals who offer expert advice and guidance
-                        to organizations seeking to improve their business processes, strategies, and operations</p>
+                      <p>Banking consulting services are sought after by a diverse range of businesses within the financial industry and beyond. 
+                      Some of the types of businesses that typically use banking consulting services include: 
+                      <ul>
+                        <li>Banks and Financial Institutions</li>
+                        <li>Fintech Startups</li>
+                        <li>Corporate Enterprises</li>
+                        <li>Asset Management Firms</li>
+                        <li>Insurance Companies</li>
+                      </ul>
+                    
+                    </p>
                     </div>
                   </div>
                 </div>
@@ -1348,14 +1364,13 @@
                   <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      What are the benefits of using a business consulting service?
+                      What are the benefits of using a banking consulting service?
                     </button>
                   </h2>
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#general_accordion">
                     <div class="accordion-body">
-                      <p>Business consulting is a service provided by professionals who offer expert advice and guidance
-                        to organizations seeking to improve their business processes, strategies, and operations</p>
+                      <p>Using a banking consulting service can provide a wide range of benefits for businesses in the financial industry and beyond.</p>
                     </div>
                   </div>
                 </div>
@@ -1363,14 +1378,13 @@
                   <h2 class="accordion-header" id="headingFour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      How much do consulting services cost?
+                      How much do banking consulting services cost?
                     </button>
                   </h2>
                   <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#general_accordion">
                     <div class="accordion-body">
-                      <p>Business consulting is a service provided by professionals who offer expert advice and guidance
-                        to organizations seeking to improve their business processes, strategies, and operations</p>
+                      <p>The cost of banking consulting services can vary widely based on several factors, including the scope and complexity of the project, the level of expertise required, the duration of the engagement, the size of the consulting firm, and the geographic location. Consulting fees are typically determined through negotiation between the consulting firm and the client. </p>
                     </div>
                   </div>
                 </div>
@@ -1384,7 +1398,7 @@
 
 
     <!-- team area start -->
-    <section class="tp-team-area pb-120 tp-team-item-margin">
+    <!-- <section class="tp-team-area pb-120 tp-team-item-margin">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -1465,12 +1479,12 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- team area end -->
 
 
     <!-- testimonial area start -->
-    <section class="tp-testimonial-area tp-testimonial-bg-color p-relative pt-80 pb-50" data-bg-color="#F6F6F9">
+    <!-- <section class="tp-testimonial-area tp-testimonial-bg-color p-relative pt-80 pb-50" data-bg-color="#F6F6F9">
       <div class="tp-testimonial-bg">
         <img src="assets/img/testimonial/bg-shape.png" alt="">
       </div>
@@ -1540,7 +1554,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- testimonial area end -->
 
 
@@ -1666,8 +1680,7 @@
                 <a href="index.html"></a>
               </div>
               <div class="tp-footer-widget-content">
-                <p>Payment processing is a critical component of any business that sells goods or se Payment processing
-                  is a critical component of any.</p>
+                <p>Empowering Your Financial Journey: We're Committed to Your Success Every Step of the Way. At BankPH, Your Future Is Our Priority.</p>
                 <div class="tp-footer-widget-social">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
                   <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1685,13 +1698,13 @@
                   <li><a href="#">About us</a></li>
                   <li><a href="#">Categories</a></li>
                   <li><a href="#">Services</a></li>
-                  <li><a href="#">Blog Grid</a></li>
+                  <!-- <li><a href="#">Blog Grid</a></li> -->
                   <li><a href="#">Contact Us</a></li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-4 col-md-6">
+          <!-- <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="tp-footer-widget tp-footer-col-3 mb-50">
               <h3 class="tp-footer-widget-title">Popular Post</h3>
               <div class="tp-footer-widget-content">
@@ -1710,7 +1723,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="col-xl-3 col-lg-6 col-md-6">
             <div class="tp-footer-widget tp-footer-col-4 mb-50">
               <h3 class="tp-footer-widget-title">Contact us</h3>
@@ -1718,13 +1731,13 @@
                 <div class="tp-footer-widget-contact">
                   <div class="tp-footer-widget-contact-inner">
                     <a href="https://www.google.com/maps" target="_blank"><i
-                        class="fa-sharp fa-solid fa-location-dot"></i> 6391 Elgin St. Celina, 10299</a>
+                        class="fa-sharp fa-solid fa-location-dot"></i> Brgy, Makati Stock Exchange Building, G/F, Ayala Ave, Makati, 1226 Metro Manila</a>
                   </div>
                   <div class="tp-footer-widget-contact-inner">
-                    <a href="tel:123456765"><i class="fa-solid fa-phone"></i> (629) 555-0129</a>
+                    <a href="el:+63180015500059"><i class="fa-solid fa-phone"></i> (+63) 1800 1550 0059</a>
                   </div>
                   <div class="tp-footer-widget-contact-inner">
-                    <a href="mailto:info@example.com"><i class="fa-solid fa-envelope"></i> info@example.com</a>
+                    <a href="mailto:info@bankph.com"><i class="fa-solid fa-envelope"></i> info@bankph.com</a>
                   </div>
                 </div>
               </div>
@@ -1746,7 +1759,7 @@
               <a href="#">About us</a>
               <a href="#">Categories</a>
               <a href="#">Services</a>
-              <a href="#">Blog Grid</a>
+              <!-- <a href="#">Blog Grid</a> -->
               <a href="#">Contact Us</a>
             </div>
           </div>
