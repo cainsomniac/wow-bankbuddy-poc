@@ -9,9 +9,9 @@ function addWebChat() {
   // own assistant if you wish to try this example with your assistant. You can find the documentation for this at
   // https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-configuration#configurationobject.
   const options = {
-    integrationID: "376ef92e-04cc-450f-a044-15cf5f3de548", // The ID of this integration.
-    region: "au-syd", // The region your integration is hosted in.
-    serviceInstanceID: "72a56e5a-a6d3-4ca5-bddb-7ab1ea1d1183", // The ID of your service instance.
+    integrationID: "d5f43ffc-6c22-4183-ab45-7192be542cf9", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "7c2dffd0-f99e-4408-9993-54d58a28ab11", // The ID of your service instance.
     onLoad: webChatOnLoad,
   };
 
