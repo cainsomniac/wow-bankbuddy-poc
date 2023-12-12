@@ -13,7 +13,7 @@
   /> -->
   <meta
   http-equiv="Content-Security-Policy"
-  content="default-src 'self' *.watson.appdomain.cloud fonts.gstatic.com 'unsafe-inline';connect-src *.watson.appdomain.cloud; img-src * self;frame-src * self blob: data: gap:;"
+  content="default-src 'self' *.watson.appdomain.cloud fonts.gstatic.com 'unsafe-inline';connect-src *.watsonplatform.net *.watson.appdomain.cloud; img-src * self;frame-src * self blob: data: gap:;"
   />
 
   <!-- Place favicon.ico in the root directory -->
@@ -174,6 +174,7 @@
       integrationID: "29021e13-c0c9-4c0d-81b0-0cc7c97224ab", // The ID of this integration.
       region: "us-south", // The region your integration is hosted in.
       serviceInstanceID: "2d38bacc-bb94-45d8-94bd-0ff24a678f82", // The ID of your service instance.
+      // identityToken: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJCQU5LUEgiLCJpc3MiOiJDTElFTlQiLCJpYXQiOjE3MDIzMjI1NjUsImV4cCI6MTcwNDkxNDU2NX0.PMWGyrbjw73dnfony6NKM3wEw-I5CbLx7KO6ouyuGu-CeqiYELogRla7pXUn3d8nCHT8sTn-QnSEk2enj_ejCQJRO4RXi6QJW4ZlO4ie5xZkCfwqX2Jxmp3jWctxbecUCyWBA19KLyuWxNbDoeCrZTVvlCCgzdCuSYbCwz44w2_1iPRO5H_mU4pFcy5g_B1Rl5pGTK3RGvt8Y2Pu6ykqFj5EKkapCNeS31yQ9RYM8C3LBMkDlTW6JXFcLAwMGFOzUhplP3fuAxbzNHGxj_gA80tOzBYyFVEvZse9ZIYYZOcXdogRSaGnmHUhRh43yuOo5XGFfgqClEM9q41u-kxqPg",
       onLoad: onLoad,
   };
   setTimeout(function(){const t=document.createElement('script');t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";document.head.appendChild(t);});
